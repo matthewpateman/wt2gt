@@ -1,0 +1,27 @@
+<%# ***** SIDE CONTENT ***** %>
+<div class="side">
+
+	<ul>
+
+		<li <% if params[:action].eql?('profile')	%>class = "current"<% end %>>
+			<%= link_to "Profile", :controller => "settings", :action => "profile"  %>
+		</li>
+ 
+  		<li <% if params[:action].eql?('networks')		%>class = "current"<% end %>>
+			<%= link_to "Social Networks", :controller => "settings", :action => "networks"  %>
+		</li>
+		 
+		<li <% if params[:action].eql?('shipping') %>class = "current"<% end %>>
+			<%= link_to "Shipping Options", :controller => "settings", :action => "shipping"  %>
+		</li>
+
+		<li <% if params[:action].eql?('payment')		%>class = "current"<% end %>>
+			<%= link_to "Payment Details", :controller => "settings", :action => "payment"  %>
+		</li>
+ 
+
+
+	</ul>
+
+</div>
+

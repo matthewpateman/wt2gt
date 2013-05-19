@@ -17,6 +17,10 @@
             <%= link_to 'Log Out', '/sessions/destroy', {:method=>:delete} if logged_in? %>
       <%= link_to 'Log In', '/sessions/new' + request.url unless logged_in? %>
 </nav>
+
+<div id="side">
+  <%= yield :left %>
+</div>
   
 <%= yield %>
 

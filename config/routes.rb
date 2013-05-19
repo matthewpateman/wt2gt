@@ -1,5 +1,8 @@
 Wt2gt::Application.routes.draw do
 
+  resources :friends
+
+
   # Settings
 
 

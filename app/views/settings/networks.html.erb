@@ -1,7 +1,30 @@
-<h1>Settings#networks</h1>
-<p>Find me in app/views/settings/networks.html.erb</p>
+<%# ***** SIDE CONTENT ***** %>
+<% content_for(:left) do %>
+<%= render 'subnav' %>
+<% end %>
+
+<h1>Social Networks</h1>
+<h2>Linked Accounts</h2>
 <ul>
-	<li>Facebook</li>
-	<li>Twitter</li>
-	<li>Google+</li>
+	<li>
+<p>You have not linked your Facebook account yet</p>
+<p>Link Now</p>
+</li>
+<li>
+<p>You have not linked your Twitter account yet</p>
+<p>Link Now</p>
+</li>
+<li>
+<p>You have not linked your Google+ account yet</p>
+<p>Link Now</p>
+</li>
 </ul>
+
+<h2>Facebook Settings</h2>
+<%= form_tag do %>
+
+<p>Publish achievements to Timeline<%= check_box_tag 'accept' %></p>
+
+<%= submit_tag %>
+
+<% end %>

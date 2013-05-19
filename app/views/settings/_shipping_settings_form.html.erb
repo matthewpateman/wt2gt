@@ -1,0 +1,34 @@
+<%= form_tag :action => 'shipping' do %>
+<section>  
+  <div class="label"><%= label_tag :address_street_one %></div>
+    <div class="field"><%= text_field_tag :address_street_one, @user.address_street_one %></div>
+</section>
+<section>  
+  <div class="label"><%= label_tag :address_street_two %></div>
+    <div class="field"><%= text_field_tag :address_street_two, @user.address_street_two %></div>
+</section>
+<section>  
+  <div class="label"><%= label_tag :address_street_three %></div>
+    <div class="field"><%= text_field_tag :address_street_three, @user.address_street_three %></div>
+</section>
+<section>
+  <div class="label"><%= label_tag :address_city %></div>
+    <div class="field"><%= text_field_tag :address_city, @user.address_city %></div>
+</section>
+<section>
+  <div class="label"><%= label_tag :address_state %></div>
+    <div class="field"><%= text_field_tag :address_state, @user.address_state %></div>
+</section>
+<section>
+    <div class="label"><%= label_tag :address_postcode %></div>
+    <div class="field"><%= text_field_tag :address_postcode, @user.address_postcode %></div>
+</section>
+<section>
+    <div class="label"><%= label_tag :address_country %></div>
+    <div class="field"><%= text_field_tag :address_country, @user.address_country %></div>
+</section>
+
+<section>
+    <div class="field"><%= submit_tag 'Update Shipping Details' %></div>
+</section>
+<% end %>

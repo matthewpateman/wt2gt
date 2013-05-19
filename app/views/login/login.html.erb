@@ -1,0 +1,12 @@
+<h1>Login#index</h1>
+<p>Find me in app/views/login/index.html.erb</p>
+
+<h2>Hello <%= @memory_name %></h2>
+   <%= form_tag :action => 'login' do %>
+      <p>What is your name?</p>
+      <%= text_field_tag 'input_name', @memory_name %>
+      <%= submit_tag 'Log In' %>
+<% end %>
+   <% unless @previous_memory_name.blank? %>
+      <p>Last time your name was: <%= @previous_memory_name %></p>
+<% end %>

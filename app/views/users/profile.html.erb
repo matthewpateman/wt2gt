@@ -1,0 +1,56 @@
+<%# ***** SIDE CONTENT ***** %>
+<p>
+  <b>First name:</b>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @user.username %>
+</p>
+
+<p>
+  <b>Profile image:</b>
+  <%= @user.profile_image %>
+</p>
+
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Price currency</th>
+    <th>Merchant</th>
+    <th>Url</th>
+    <th>Private</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @items.each do |item| %>
+  <tr>
+    <td><%= item.user_id %></td>
+    <td><%= item.name %></td>
+    <td><%= item.price %></td>
+    <td><%= item.price_currency %></td>
+    <td><%= item.merchant_id %></td>
+    <td><%= item.url %></td>
+    <td><%= item.private %></td>
+    <td><%= link_to 'Show', item %></td>
+    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>

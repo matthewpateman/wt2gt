@@ -1,5 +1,8 @@
 Wt2gt::Application.routes.draw do
 
+  get "pages/about"
+  get "pages/blog"
+
   resources :friends
 
 
@@ -31,7 +34,7 @@ Wt2gt::Application.routes.draw do
   get "register/index"
 
   #Log In Page
-  root :to => 'sessions#index'
+  root :to => 'signup#index'
 
   resources :users
 
@@ -40,6 +43,9 @@ Wt2gt::Application.routes.draw do
   match '/register',  :controller => 'signup',   :action => 'index'
   match '/signup',  :controller => 'signup',   :action => 'index'
   match '/settings',  :controller => 'settings',   :action => 'index'
+  match '/login', :controller => 'pages', :action =>'login'
+  match '/about', :controller => 'pages', :action => 'about'
+  match '/blog', :controller => 'pages', :action => 'blog'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

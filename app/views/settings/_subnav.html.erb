@@ -19,6 +19,9 @@
 			<%= link_to "Payment Details", :controller => "settings", :action => "payment"  %>
 		</li>
  
+ 		<li <% if params[:action].eql?('import')		%>class = "current"<% end %>>
+			<%= link_to "Import Wishlists", :controller => "settings", :action => "import"  %>
+		</li>
 
 
 	</ul>

@@ -1,0 +1,24 @@
+<%= form_tag :action => 'step3' do %>
+
+    <div class="field">
+    <%= button_tag "Connect Facebook account" %>
+  </div>
+
+      <div class="field">
+    <%= button_tag "Connect Twitter account" %>
+  </div>
+
+        <div class="field">
+    <%= button_tag "Connect Google+ account" %>
+  </div>
+
+
+        <div class="field">
+    <%= check_box_tag "Activity Stream" %>Post activity on Facebook
+  </div>
+
+    <div class="actions">
+    <%= submit_tag 'Next' %>
+  </div>
+
+<% end %>

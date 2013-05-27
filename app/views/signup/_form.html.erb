@@ -1,10 +1,10 @@
 <%= form_tag :action => 'step1' do %>
 
-    <%= text_field_tag :first_name, nil, :placeholder => "First Name" %>
+    <%= text_field_tag :first_name, nil, :placeholder => "First Name", :id => "signup_first_name" %>
 
-    <%= text_field_tag :last_name, nil, :placeholder =>"Last Name" %>
+    <%= text_field_tag :last_name, nil, :placeholder =>"Last Name", :id => "signup_last_name" %>
 
-    <%= text_field_tag :email, nil, :placeholder =>"E-mail Address" %>
+    <%= text_field_tag :email, nil, :placeholder =>"E-mail Address", :id => "signup_email" %>
 
 
   <div class="actions">

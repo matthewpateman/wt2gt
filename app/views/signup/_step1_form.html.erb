@@ -1,14 +1,24 @@
-<%= form_tag :action => 'step2' do %>
+<%= form_tag :action => 'step1' do %>
+<% if @incomplete == 1 %>
+<p>It looks like there were some missing details. Please fill them out to continue</p>
 
-    <%= text_field_tag :username, nil, :placeholder => "Username" %>
+    <%= text_field_tag :first_name, @first_name, :placeholder => "First Name" %>
+
+    <%= text_field_tag :last_name, @last_name, :placeholder => "Last Name" %>
+
+    <%= text_field_tag :email, @email, :placeholder => "E-Mail" %>
+<% else %>
+    <%= hidden_field_tag :first_name, @first_name %>
+    <%= hidden_field_tag :last_name, @last_name %>
+    <%= hidden_field_tag :email, @email %>
+<% end %>
+    <%= text_field_tag :username, @username, :placeholder => "Username" %>
 
     <%= password_field_tag :password, nil, :placeholder =>"Password" %>
 
     <%= password_field_tag :password_confirmation, nil, :placeholder =>"Confirm password" %>
 
-    <%= hidden_field_tag 'first_name', @first_name %>
-    <%= hidden_field_tag 'last_name', @last_name %>
-    <%= hidden_field_tag 'email', @email %>
+
     
     <div class="actions">
     <%= submit_tag 'Next' %>

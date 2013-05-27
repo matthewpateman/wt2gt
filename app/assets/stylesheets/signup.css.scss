@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #signup_title {height:155px; position:absolute; top:56px; }
-#first_name {position:absolute; top:375px; left:50px; width:221px; height:50px; border-radius: 4px; background-color:#FFF; border:none; border-top: 2px solid #E0E0E0;}
-#last_name {position:absolute; top:375px; left:291px; width:221px; height:50px; border-radius: 4px; background-color:#FFF; border:none; border-top: 2px solid #E0E0E0;}
-#email {position:absolute; top:450px; left:50px; width:463px; height:50px; border-radius: 4px; background-color:#FFF; border:none; border-top: 2px solid #E0E0E0;}
+#signup_first_name {position:absolute; top:375px; left:50px; width:221px; }
+#signup_last_name {position:absolute; top:375px; left:291px; width:221px; }
+#signup_email {position:absolute; top:450px; left:50px; width:463px;}
 #create {position:absolute; top:525px; left:50px; width:221px; height:50px; border-radius: 4px; background-color:#6EBD98; border:none; border-bottom: 2px solid #2E7659;}

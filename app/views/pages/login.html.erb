@@ -12,7 +12,7 @@
   <%= form_tag '/sessions/create' do %>
     
         <%= text_field_tag :email_or_username, @email_or_username, :placeholder => 'E-mail or Username' %>
-        <%= password_field_tag :password, :placeholder => 'Password' %>
+        <%= password_field_tag :password, nil, :placeholder => 'Password' %>
         <%= submit_tag 'Log in' %>
 <% end %>
 

@@ -1,10 +1,19 @@
 <section id="full">
   <div class="content">
 		<h1>Welcome <%= @first_name  %></h1>
-		<p>
-A few more steps and we are done.<br/>
+<% case @incomplete %>
+<% when 1 %>
+  <p>It looks like there were some missing details. Please fill them out to continue</p>
+
+<% when 2 %>
+	<p>It looks like that email address is already in use. Would you like to log in?</p>
+
+<% else %>
+	<P>A few more steps and we are done.<br/>
 All you need to do is set up a username and a password.
-</p>
+</P>
+<% end %>
+
 <%= render 'step1_form' %>
   </div>
 </section>

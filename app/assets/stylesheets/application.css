@@ -136,13 +136,19 @@ h2 {font-size: 24px; font-weight: 600; margin: 0; padding:0; line-height: 25px; 
     color:    #8F8975;
 }
 
-input {box-sizing:border-box; padding:11px 15px; font-size: 18px; font-family: 'Open Sans'; font-weight: 300px; color:#33312F; display: block; width:221px; height:50px; border-radius: 4px; background-color:#FFF; border:none; border-top: 2px solid #E0E0E0; margin-bottom: 25px;}
+input {box-sizing:border-box; padding:11px 15px; font-size: 18px; font-family: 'Open Sans'; font-weight: 300px; color:#33312F; display: block; width:221px; height:50px; border-radius: 4px; background-color:#FFF; border:none; border-top: 2px solid #E0E0E0; margin: 0px 25px 25px 0px;  float:left;}
 
 
+form { width:500px;}
+input[type=submit] {font-weight: 400; text-align: center; color: #FFF; border-radius: 4px; background:#6EBD98; border:none; border-bottom: 2px solid #2E7659; }
 
-input[type=submit] {font-weight: 400; text-align: center; color: #FFF; border-radius: 4px; background-color:#6EBD98; border:none; border-bottom: 2px solid #2E7659; }
+input[type=submit]:active {background:  #2E7659; }
+
+
 textarea, input { outline: none; }
 
+.short {width:220px;}
+.long {width:465px;}
 
 #feature1 {background: url(background1.jpg);}
 #feature2 {background: url(background2.jpg);}

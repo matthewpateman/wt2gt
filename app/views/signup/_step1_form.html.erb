@@ -1,11 +1,11 @@
 <%= form_tag :action => 'step1' do %>
 
 <% case @incomplete %>
-<% when 1 && 2 %>
+<% when 1, 2 %>
 
-    <%= text_field_tag :first_name, @first_name, :placeholder => "First Name" %>
-    <%= text_field_tag :last_name, @last_name, :placeholder => "Last Name" %>
-    <%= text_field_tag :email, @email, :placeholder => "E-Mail" %>
+    <%= text_field_tag :first_name, @first_name, :placeholder => "First Name", :class => 'short' %>
+    <%= text_field_tag :last_name, @last_name, :placeholder => "Last Name", :class => 'short' %>
+    <%= text_field_tag :email, @email, :placeholder => "E-Mail", :class => 'long' %>
 
 <% else %>
 
@@ -15,9 +15,9 @@
 
 <% end %>
 
-    <%= text_field_tag :username, @username, :placeholder => "Username" %>
-    <%= password_field_tag :password, nil, :placeholder =>"Password" %>
-    <%= password_field_tag :password_confirmation, nil, :placeholder =>"Confirm password" %>
+    <%= text_field_tag :username, @username, :placeholder => "Username", :class => 'long' %>
+    <%= password_field_tag :password, nil, :placeholder =>"Password", :class => 'short' %>
+    <%= password_field_tag :password_confirmation, nil, :placeholder =>"Confirm password", :class => 'short' %>
     
     <div class="actions">
     	<%= submit_tag 'Next' %>

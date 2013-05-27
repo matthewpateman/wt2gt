@@ -32,6 +32,25 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def does_username_exist?(username)
+    @user = User.find_by_username(username)
+    if @user.username = username 
+      return true
+    else
+      return false
+    end
+  end
+
+  def does_email_exist?(email)
+    @user = User.find_by_email(email)
+    if @user.email = email 
+      return true
+    else
+      return false
+    end
+  end
+
+
 helper_method :current_user, :logged_in?, :require_user
 
 

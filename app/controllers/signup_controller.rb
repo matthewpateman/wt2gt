@@ -1,6 +1,5 @@
 class SignupController < ApplicationController
   def index
-
   end
 
   def step1
@@ -13,14 +12,11 @@ class SignupController < ApplicationController
     @password_confirmation = params[:password_confirmation]
 
     # Check if entered email is in use already
-    if !@email.blank? then
-      @user = User.find_by_email(@email)
-      if @user.email = @email 
-        logger.info('SIGN UP - Email address is in use already!')
+    if does_email_exist?(@email) then
         @incomplete = 2
-      end
 
     # Checks if fields from previous screen are entered.  
+
     elsif @email.blank? || @first_name.blank?  || @last_name.blank? then
       logger.info('SIGN UP - Some fields are missing')
       @incomplete = 1
@@ -36,6 +32,9 @@ class SignupController < ApplicationController
         logger.info('SIGN UP S1 - A FEW FIELDS BLANK')   
         else
         logger.info('******** NO FIELDS MISSING ********') 
+
+      
+
         if @password == @password_confirmation then 
           logger.info('******** PASSWORDS MATCH ********')
           @user = User.new do |u|
@@ -55,11 +54,13 @@ class SignupController < ApplicationController
           redirect_to :action => "step2"
         end
       end  
+    end
   end
 
   def step2
   end
 
+  def usernamecheck
 
   end
 
